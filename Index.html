@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rajpurohit Skincare | Premium Face Wash & Serums</title>
+  <meta name="description" content="Premium face washes and serums for your everyday skincare routine. Owned by Akshay Singh Rajpurohit.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    ✨ Premium Skincare Essentials • Free Shipping on Orders Above ₹999
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        <span>R</span>
+        <div>
+          <strong>RAJPUROHIT</strong>
+          <small>SKINCARE</small>
+        </div>
+      </a>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#facewash">Face Wash</a>
+        <a href="#serums">Serums</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="openSearch()" aria-label="Search">⌕</button>
+        <button onclick="openCart()" aria-label="Cart">
+          🛒 <span id="cartCount">0</span>
+        </button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Search -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+      <button class="close-search" onclick="closeSearch()">×</button>
+      <h2>Find Your Skincare</h2>
+      <input id="searchInput" type="text" placeholder="Search face wash, serum..." onkeyup="searchProducts()">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+
+        <div class="hero-text">
+          <p class="eyebrow">PREMIUM DAILY SKINCARE</p>
+
+          <h1>
+            Your Skin.
+            <br>
+            <em>Your Glow.</em>
+          </h1>
+
+          <p class="hero-description">
+            Thoughtfully selected face washes and serums designed
+            to make your everyday skincare routine simple,
+            beautiful and effective.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-dark">Shop Collection →</a>
+            <a href="#routine" class="btn btn-light">Build Your Routine</a>
+          </div>
+
+          <div class="hero-trust">
+            <div>
+              <strong>4.9/5</strong>
+              <span>Customer Rating</span>
+            </div>
+            <div>
+              <strong>10K+</strong>
+              <span>Happy Customers</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Skin Focused</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-product">
+          <div class="circle"></div>
+
+          <div class="floating-card top-card">
+            <span>✦</span>
+            <div>
+              <strong>Clean Beauty</strong>
+              <small>Made for everyday care</small>
+            </div>
+          </div>
+
+          <div class="product-bottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-body">
+              <small>RAJPUROHIT</small>
+              <strong>VITAMIN C</strong>
+              <span>FACE SERUM</span>
+              <i>30 ML</i>
+            </div>
+          </div>
+
+          <div class="floating-card bottom-card">
+            <span>♡</span>
+            <div>
+              <strong>Glow Essentials</strong>
+              <small>Simple. Clean. Premium.</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+      <div class="container benefits-grid">
+
+        <div class="benefit">
+          <div>✦</div>
+          <h3>Premium Quality</h3>
+          <p>Carefully selected skincare essentials.</p>
+        </div>
+
+        <div class="benefit">
+          <div>♡</div>
+          <h3>Skin Friendly</h3>
+          <p>Designed with everyday skincare in mind.</p>
+        </div>
+
+        <div class="benefit">
+          <div>♢</div>
+          <h3>Thoughtful Formulas</h3>
+          <p>Simple ingredients for modern routines.</p>
+        </div>
+
+        <div class="benefit">
+          <div>✓</div>
+          <h3>Made for You</h3>
+          <p>Products for different skin types.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="products-section" id="shop">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SHOP OUR COLLECTION</p>
+            <h2>Skincare <em>Essentials</em></h2>
+          </div>
+
+          <div class="filters">
+            <button class="filter active" onclick="filterProducts('all', this)">All</button>
+            <button class="filter" onclick="filterProducts('facewash', this)">Face Wash</button>
+            <button class="filter" onclick="filterProducts('serum', this)">Serums</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+          <!-- Product 1 -->
+          <article class="product-card" data-category="facewash">
+            <div class="product-image beige">
+              <span class="badge">BESTSELLER</span>
+
+              <div class="fake-product">
+                <div class="fake-cap"></div>
+                <div class="fake-bottle">
+                  <small>RAJPUROHIT</small>
+                  <strong>GENTLE</strong>
+                  <span>FACE WASH</span>
+                  <i>100 ML</i>
+                </div>
+              </div>
+
+              <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            </div>
+
+            <div class="product-info">
+              <p class="category">FACE WASH</p>
+              <h3>Gentle Hydrating Face Wash</h3>
+              <p class="description">A refreshing daily cleanser for clean and comfortable skin.</p>
+
+              <div class="rating">★★★★★ <span>(128)</span></div>
+
+              <div class="price">
+                <strong>₹499</strong>
+                <del>₹699</del>
+                <span>29% OFF</span>
+              </div>
+
+              <button class="add-cart"
+                onclick="addToCart('Gentle Hydrating Face Wash', 499)">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-category="facewash">
+            <div class="product-image peach">
+
+              <span class="badge">NEW</span>
+
+              <div class="fake-product">
+                <div class="fake-cap"></div>
+                <div class="fake-bottle">
+                  <small>RAJPUROHIT</small>
+                  <strong>VITAMIN C</strong>
+                  <span>FACE WASH</span>
+                  <i>100 ML</i>
+                </div>
+              </div>
+
+              <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            </div>
+
+            <div class="product-info">
+              <p class="category">FACE WASH</p>
+              <h3>Vitamin C Brightening Face Wash</h3>
+              <p class="description">A refreshing cleanser for a fresh-looking complexion.</p>
+
+              <div class="rating">★★★★★ <span>(96)</span></div>
+
+              <div class="price">
+                <strong>₹549</strong>
+                <del>₹749</del>
+                <span>27% OFF</span>
+              </div>
+
+              <button class="add-cart"
+                onclick="addToCart('Vitamin C Brightening Face Wash', 549)">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-category="serum">
+            <div class="product-image gold">
+
+              <span class="badge">POPULAR</span>
+
+              <div class="fake-product">
+                <div class="fake-cap"></div>
+                <div class="fake-bottle serum-bottle">
+                  <small>RAJPUROHIT</small>
+                  <strong>VITAMIN C</strong>
+                  <span>FACE SERUM</span>
+                  <i>30 ML</i>
+                </div>
+              </div>
+
+              <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            </div>
+
+            <div class="product-info">
+              <p class="category">SERUM</p>
+              <h3>Vitamin C Glow Serum</h3>
+              <p class="description">A lightweight serum for a radiant-looking complexion.</p>
+
+              <div class="rating">★★★★★ <span>(214)</span></div>
+
+              <div class="price">
+                <strong>₹699</strong>
+                <del>₹999</del>
+                <span>30% OFF</span>
+              </div>
+
+              <button class="add-cart"
+                onclick="addToCart('Vitamin C Glow Serum', 699)">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-category="serum">
+            <div class="product-image green">
+
+              <div class="fake-product">
+                <div class="fake-cap"></div>
+                <div class="fake-bottle serum-bottle">
+                  <small>RAJPUROHIT</small>
+                  <strong>NIACINAMIDE</strong>
+                  <span>FACE SERUM</span>
+                  <i>30 ML</i>
+                </div>
+              </div>
+
+              <button class="heart" onclick="toggleWishlist(this)">♡</button>
+            </div>
+
+            <div class="product-info">
+              <p class="category">SERUM</p>
+              <h3>Niacinamide Balance Serum</h3>
+              <p class="description">A lightweight serum for a balanced-looking skin routine.</p>
+
+              <div class="rating">★★★★★ <span>(173)</span></div>
+
+              <div class="price">
+                <strong>₹649</strong>
+                <del>₹899</del>
+                <span>28% OFF</span>
+              </div>
+
+              <button class="add-cart"
+                onclick="addToCart('Niacinamide Balance Serum', 649)">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Ingredient section -->
+    <section class="ingredients">
+      <div class="container ingredient-layout">
+
+        <div class="ingredient-image">
+          <div class="ingredient-circle">
+            <span>VITAMIN</span>
+            <strong>C</strong>
+            <small>BRIGHTENING CARE</small>
+          </div>
+        </div>
+
+        <div class="ingredient-content">
+          <p class="eyebrow">INGREDIENT SPOTLIGHT</p>
+          <h2>Good skincare begins with <em>good ingredients.</em></h2>
+
+          <p>
+            Discover thoughtfully selected skincare ingredients and
+            understand how they can fit into your daily routine.
+          </p>
+
+          <div class="ingredient-list">
+
+            <div>
+              <span>01</span>
+              <section>
+                <h3>Vitamin C</h3>
+                <p>Known for supporting a brighter-looking complexion.</p>
+              </section>
+            </div>
+
+            <div>
+              <span>02</span>
+              <section>
+                <h3>Niacinamide</h3>
+                <p>A popular ingredient for balanced-looking skin.</p>
+              </section>
+            </div>
+
+            <div>
+              <span>03</span>
+              <section>
+                <h3>Hyaluronic Acid</h3>
+                <p>Popular for helping skin feel hydrated and supple.</p>
+              </section>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Routine -->
+    <section class="routine" id="routine">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+          <p class="eyebrow">YOUR DAILY ROUTINE</p>
+          <h2>Simple steps. <em>Beautiful routine.</em></h2>
+          <p>Build an easy skincare routine you can actually stick to.</p>
+        </div>
+
+        <div class="routine-grid">
+
+          <div class="routine-card">
+            <div class="routine-number">01</div>
+            <div class="routine-icon">💧</div>
+            <h3>Cleanse</h3>
+            <p>Start with a suitable face wash to cleanse your skin.</p>
+          </div>
+
+          <div class="routine-card">
+            <div class="routine-number">02</div>
+            <div class="routine-icon">✨</div>
+            <h3>Treat</h3>
+            <p>Apply a serum suited to your skincare goals.</p>
+          </div>
+
+          <div class="routine-card">
+            <div class="routine-number">03</div>
+            <div class="routine-icon">🌿</div>
+            <h3>Moisturize</h3>
+            <p>Finish with moisturizer and daytime SPF when appropriate.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+      <div class="container about-layout">
+
+        <div class="about-visual">
+          <div class="about-card">
+            <span>R</span>
+            <p>RAJPUROHIT</p>
+            <small>SKINCARE</small>
+          </div>
+        </div>
+
+        <div class="about-text">
+
+          <p class="eyebrow">OUR STORY</p>
+
+          <h2>Skincare that feels <em>personal.</em></h2>
+
+          <p>
+            Rajpurohit Skincare is built around a simple idea:
+            skincare should be easy to understand, enjoyable to use,
+            and designed around everyday needs.
+          </p>
+
+          <p>
+            The brand is owned by <strong>Akshay Singh Rajpurohit</strong>,
+            with a vision to create a premium and memorable skincare
+            experience.
+          </p>
+
+          <a href="#contact" class="text-link">Get in Touch →</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+          <p class="eyebrow">CUSTOMER LOVE</p>
+          <h2>Loved by our <em>community.</em></h2>
+        </div>
+
+        <div class="review-grid">
+
+          <div class="review">
+            <div class="rating">★★★★★</div>
+            <p>
+              "The website experience is beautiful and the product
+              packaging looks absolutely premium."
+            </p>
+            <strong>— Priya S.</strong>
+          </div>
+
+          <div class="review">
+            <div class="rating">★★★★★</div>
+            <p>
+              "I love how simple the skincare routine is. The serum
+              feels lightweight and easy to use."
+            </p>
+            <strong>— Riya M.</strong>
+          </div>
+
+          <div class="review">
+            <div class="rating">★★★★★</div>
+            <p>
+              "Clean design, easy shopping and a really premium
+              skincare feel."
+            </p>
+            <strong>— Anjali R.</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+      <div class="container newsletter-inner">
+
+        <div>
+          <p class="eyebrow">JOIN THE GLOW CLUB</p>
+          <h2>Skincare tips. New launches. <em>Exclusive offers.</em></h2>
+        </div>
+
+        <form onsubmit="subscribe(event)">
+          <input type="email" id="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe →</button>
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+      <div class="container contact-layout">
+
+        <div>
+          <p class="eyebrow">CONTACT US</p>
+          <h2>Let's talk <em>skincare.</em></h2>
+          <p>
+            Have a question about our products or your routine?
+            Send us a message.
+          </p>
+
+          <div class="contact-info">
+            <p>✉ hello@rajpurohitskincare.com</p>
+            <p>📞 +91 XXXXX XXXXX</p>
+            <p>📍 Rajasthan, India</p>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+
+          <input type="text" placeholder="Your Name" required>
+
+          <input type="email" placeholder="Email Address" required>
+
+          <input type="tel" placeholder="Phone Number">
+
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+
+          <button type="submit" class="btn btn-dark">
+            Send Message →
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="logo">
+          <span>R</span>
+          <div>
+            <strong>RAJPUROHIT</strong>
+            <small>SKINCARE</small>
+          </div>
+        </a>
+
+        <p>
+          Premium skincare essentials for your everyday glow.
+        </p>
+
+        <p class="owner">
+          Owned by <strong>Akshay Singh Rajpurohit</strong>
+        </p>
+
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop">All Products</a>
+        <a href="#facewash">Face Wash</a>
+        <a href="#serums">Serums</a>
+        <a href="#shop">Best Sellers</a>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <a href="#">FAQs</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 Rajpurohit Skincare. All Rights Reserved.</span>
+        <span>Owned by Akshay Singh Rajpurohit</span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button onclick="closeCart()">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+      <p class="empty-cart">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+
+      <button class="checkout" onclick="checkout()">
+        Proceed to Checkout →
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    Added to cart ✓
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+    </html>
