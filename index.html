@@ -4,778 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shree Ji Computer Classes | Kishangarh</title>
+  <title>Shree Ji Computer Classes | Ajmer</title>
 
-  <meta name="description" content="Shree Ji Computer Classes, Kishangarh Ajmer - Computer courses, Tally, MS Office, CCC, Typing and more. Enroll online today.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    /* TOP BAR */
-    .topbar {
-      background: #0b1f3a;
-      color: white;
-      text-align: center;
-      padding: 9px 15px;
-      font-size: 14px;
-    }
-
-    /* NAVBAR */
-    nav {
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    }
-
-    .nav-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #0b1f3a;
-    }
-
-    .logo span {
-      color: #1769e0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: #172033;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .nav-links a:hover {
-      color: #1769e0;
-    }
-
-    .nav-btn {
-      background: #1769e0;
-      color: white !important;
-      padding: 10px 16px;
-      border-radius: 8px;
-    }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #071b36, #1769e0);
-      color: white;
-      padding: 80px 20px;
-    }
-
-    .hero-inner {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #8ed1ff;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 650px;
-      margin-bottom: 28px;
-      color: #e4efff;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 9px;
-      font-weight: 700;
-      border: 2px solid transparent;
-    }
-
-    .btn-primary {
-      background: white;
-      color: #0b4fc4;
-    }
-
-    .btn-outline {
-      border-color: white;
-      color: white;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      backdrop-filter: blur(8px);
-    }
-
-    .computer-icon {
-      font-size: 70px;
-      margin-bottom: 10px;
-    }
-
-    .hero-card h3 {
-      font-size: 25px;
-      margin-bottom: 8px;
-    }
-
-    /* GENERAL */
-    section {
-      padding: 70px 20px;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 34px;
-      color: #0b1f3a;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #687386;
-    }
-
-    /* COURSES */
-    .courses {
-      background: white;
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .course-card {
-      background: #f8faff;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 25px;
-      transition: 0.25s;
-    }
-
-    .course-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(23,105,224,0.12);
-    }
-
-    .course-icon {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .course-card h3 {
-      color: #0b1f3a;
-      margin-bottom: 8px;
-    }
-
-    .course-card p {
-      color: #687386;
-      font-size: 14px;
-    }
-
-    /* FEATURES */
-    .features {
-      background: #f5f7fb;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      background: white;
-      padding: 25px 18px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
-
-    .feature .icon {
-      font-size: 35px;
-      margin-bottom: 8px;
-    }
-
-    .feature h3 {
-      font-size: 17px;
-      color: #0b1f3a;
-    }
-
-    /* ABOUT */
-    .about {
-      background: white;
-    }
-
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box h2 {
-      font-size: 32px;
-      color: #0b1f3a;
-      margin-bottom: 15px;
-    }
-
-    .about-box p {
-      color: #5d6879;
-      font-size: 17px;
-    }
-
-    .owner {
-      margin-top: 20px;
-      display: inline-block;
-      background: #eef5ff;
-      padding: 12px 20px;
-      border-radius: 10px;
-      color: #0b4fc4;
-      font-weight: 700;
-    }
-
-    /* ENROLLMENT */
-    .enroll {
-      background: linear-gradient(135deg, #0b1f3a, #1769e0);
-      color: white;
-    }
-
-    .enroll-box {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      color: #172033;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-
-    .enroll-box h2 {
-      text-align: center;
-      color: #0b1f3a;
-      margin-bottom: 7px;
-      font-size: 30px;
-    }
-
-    .enroll-box .sub {
-      text-align: center;
-      color: #687386;
-      margin-bottom: 25px;
-    }
-
-    .form-group {
-      margin-bottom: 17px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #d5dce7;
-      border-radius: 8px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-      border-color: #1769e0;
-    }
-
-    .submit-btn {
-      width: 100%;
-      border: none;
-      padding: 14px;
-      border-radius: 9px;
-      background: #1769e0;
-      color: white;
-      font-size: 17px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #0b4fc4;
-    }
-
-    .form-note {
-      text-align: center;
-      color: #687386;
-      font-size: 12px;
-      margin-top: 12px;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #f5f7fb;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      background: white;
-      padding: 25px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
-
-    .contact-card .icon {
-      font-size: 35px;
-      margin-bottom: 8px;
-    }
-
-    .contact-card h3 {
-      color: #0b1f3a;
-    }
-
-    .contact-card p {
-      color: #687386;
-      margin-top: 5px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #071526;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    footer p {
-      margin: 5px;
-      color: #b9c5d5;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 37px;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .course-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .course-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 60px 15px;
-      }
-
-      section {
-        padding: 55px 15px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="topbar">
-    📍 Kishangarh, Ajmer, Rajasthan &nbsp; | &nbsp; 📞 8432457652
-  </div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Shree Ji Computer Classes</div>
 
-  <nav>
-    <div class="nav-inner">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-      <div class="logo">
-        Shree Ji <span>Computer Classes</span>
+  <!-- Home -->
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+      <p class="welcome">WELCOME TO</p>
+
+      <h1>Shree Ji<br>Computer Classes</h1>
+
+      <p>
+        Computer सीखें आसान तरीके से और अपने भविष्य को
+        बेहतर बनाएं।
+      </p>
+
+      <div class="buttons">
+        <a href="#courses" class="btn">Our Courses</a>
+
+        <a href="tel:8432457652" class="btn call-btn">
+          📞 Call Now
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Courses -->
+  <section id="courses" class="section">
+
+    <p class="small-title">OUR COURSES</p>
+
+    <h2>हमारे Courses</h2>
+
+    <div class="course-container">
+
+      <div class="course-card">
+        <div class="icon">💻</div>
+        <h3>Basic Computer</h3>
+        <p>
+          Computer की basic knowledge बिल्कुल
+          आसान तरीके से सीखें।
+        </p>
       </div>
 
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#enroll" class="nav-btn">Enroll Now</a>
+      <div class="course-card">
+        <div class="icon">📄</div>
+        <h3>MS Office</h3>
+        <p>
+          MS Word, Excel और PowerPoint की
+          practical training।
+        </p>
+      </div>
+
+      <div class="course-card">
+        <div class="icon">⌨️</div>
+        <h3>Typing Course</h3>
+        <p>
+          Hindi और English typing की
+          practice और speed improvement।
+        </p>
+      </div>
+
+      <div class="course-card">
+        <div class="icon">🌐</div>
+        <h3>Internet & Online Work</h3>
+        <p>
+          Internet, email और online services
+          का practical ज्ञान।
+        </p>
       </div>
 
     </div>
-  </nav>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
+  </section>
 
-      <div>
-        <h1>
-          Learn Computer Skills.<br>
-          <span>Build Your Future.</span>
-        </h1>
 
-        <p>
-          Shree Ji Computer Classes में कंप्यूटर की practical और useful
-          skills सीखें। Beginners से लेकर advanced courses तक।
-        </p>
+  <!-- About -->
+  <section id="about" class="about section">
 
-        <div class="hero-buttons">
-          <a href="#enroll" class="btn btn-primary">
-            📝 Enroll Now
-          </a>
+    <div class="about-content">
 
-          <a href="#courses" class="btn btn-outline">
-            💻 View Courses
-          </a>
-        </div>
-      </div>
+      <p class="small-title">ABOUT US</p>
 
-      <div class="hero-card">
-        <div class="computer-icon">💻</div>
-        <h3>Shree Ji Computer Classes</h3>
-        <p>Kishangarh, Ajmer</p>
+      <h2>आपके बेहतर भविष्य की शुरुआत</h2>
+
+      <p>
+        Shree Ji Computer Classes में विद्यार्थियों को
+        computer की practical और आसान training दी जाती है।
+        हमारा उद्देश्य विद्यार्थियों को digital world के लिए
+        तैयार करना है।
+      </p>
+
+      <div class="teacher">
+        <strong>👨‍🏫 संचालक</strong>
         <br>
-        <strong>Admissions Open</strong>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- COURSES -->
-  <section class="courses" id="courses">
-
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Our Courses</h2>
-        <p>अपने जरूरत के अनुसार course चुनें</p>
-      </div>
-
-      <div class="course-grid">
-
-        <div class="course-card">
-          <div class="course-icon">🖥️</div>
-          <h3>Basic Computer</h3>
-          <p>Computer की basic से practical knowledge तक।</p>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon">📊</div>
-          <h3>MS Office</h3>
-          <p>MS Word, Excel और PowerPoint की practical training।</p>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon">💰</div>
-          <h3>Tally</h3>
-          <p>Accounting और Tally की practical learning।</p>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon">⌨️</div>
-          <h3>Typing</h3>
-          <p>Hindi और English typing की practice और speed improvement।</p>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon">📜</div>
-          <h3>CCC</h3>
-          <p>CCC exam की तैयारी और computer fundamentals।</p>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon">🌐</div>
-          <h3>All Computer Courses</h3>
-          <p>अपनी जरूरत के अनुसार अन्य available courses के लिए contact करें।</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features">
-
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Why Choose Us?</h2>
-        <p>सीखने के लिए एक बेहतर जगह</p>
-      </div>
-
-      <div class="feature-grid">
-
-        <div class="feature">
-          <div class="icon">👨‍🏫</div>
-          <h3>Practical Learning</h3>
-        </div>
-
-        <div class="feature">
-          <div class="icon">💻</div>
-          <h3>Computer Practice</h3>
-        </div>
-
-        <div class="feature">
-          <div class="icon">🎯</div>
-          <h3>Career Focused</h3>
-        </div>
-
-        <div class="feature">
-          <div class="icon">📍</div>
-          <h3>Kishangarh Location</h3>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <div class="container">
-
-      <div class="about-box">
-
-        <h2>About Shree Ji Computer Classes</h2>
-
-        <p>
-          Shree Ji Computer Classes, Kishangarh में students को
-          computer education और practical skills सीखने के लिए
-          बेहतर learning environment देने का उद्देश्य रखता है।
-        </p>
-
-        <div class="owner">
-          👨‍🏫 संचालक: Mukesh Ji Sharma
-        </div>
-
+        Mukesh Ji Sharma
       </div>
 
     </div>
 
   </section>
 
-  <!-- ENROLLMENT -->
-  <section class="enroll" id="enroll">
 
-    <div class="container">
+  <!-- Contact -->
+  <section id="contact" class="contact section">
 
-      <div class="enroll-box">
+    <p class="small-title">CONTACT US</p>
 
-        <h2>📝 Online Enrollment</h2>
+    <h2>आज ही संपर्क करें</h2>
 
-        <p class="sub">
-          नीचे अपनी जानकारी भरें और WhatsApp पर enrollment भेजें।
-        </p>
+    <p>Admission और Courses की जानकारी के लिए संपर्क करें।</p>
 
-        <form onsubmit="sendWhatsApp(); return false;">
+    <div class="contact-box">
 
-          <div class="form-group">
-            <label>आपका नाम</label>
-            <input
-              type="text"
-              id="studentName"
-              placeholder="अपना पूरा नाम लिखें"
-              required
-            >
-          </div>
+      <p>👨‍🏫 <strong>Mukesh Ji Sharma</strong></p>
 
-          <div class="form-group">
-            <label>मोबाइल नंबर</label>
-            <input
-              type="tel"
-              id="studentPhone"
-              placeholder="10 digit mobile number"
-              maxlength="10"
-              pattern="[0-9]{10}"
-              required
-            >
-          </div>
+      <p>
+        📞
+        <a href="tel:8432457652">
+          84324 57652
+        </a>
+      </p>
 
-          <div class="form-group">
-            <label>Course चुनें</label>
-
-            <select id="studentCourse" required>
-              <option value="">-- Course Select करें --</option>
-              <option>Basic Computer</option>
-              <option>MS Office</option>
-              <option>Tally</option>
-              <option>Typing</option>
-              <option>CCC</option>
-              <option>Other / All Courses</option>
-            </select>
-
-          </div>
-
-          <button type="submit" class="submit-btn">
-            📲 Submit Enrollment
-          </button>
-
-          <p class="form-note">
-            Submit करने पर WhatsApp खुलेगा और आपकी enrollment details
-            भेजने के लिए तैयार हो जाएगी।
-          </p>
-
-        </form>
-
-      </div>
+      <a
+        class="whatsapp"
+        href="https://wa.me/918432457652"
+        target="_blank">
+        💬 WhatsApp पर संपर्क करें
+      </a>
 
     </div>
 
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
 
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Admission या course की जानकारी के लिए संपर्क करें</p>
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-card">
-          <div class="icon">📞</div>
-          <h3>Call / WhatsApp</h3>
-          <p>8432457652</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="icon">📍</div>
-          <h3>Location</h3>
-          <p>Kishangarh, Ajmer, Rajasthan</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="icon">🎓</div>
-          <h3>Admissions</h3>
-          <p>Admissions Open</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>© 2026 Shree Ji Computer Classes</p>
-    <p>Kishangarh, Ajmer, Rajasthan</p>
-    <p>Managed by Mukesh Ji Sharma</p>
+
+    <h3>Shree Ji Computer Classes</h3>
+
+    <p>
+      Learn Today • Grow Tomorrow
+    </p>
+
+    <p>
+      © 2026 Shree Ji Computer Classes
+    </p>
+
   </footer>
 
-
-  <script>
-
-    function sendWhatsApp() {
-
-      const name = document.getElementById("studentName").value;
-      const phone = document.getElementById("studentPhone").value;
-      const course = document.getElementById("studentCourse").value;
-
-      const message =
-        "🎓 *New Enrollment - Shree Ji Computer Classes*%0A%0A" +
-        "👤 *Student Name:* " + encodeURIComponent(name) + "%0A" +
-        "📱 *Mobile Number:* " + encodeURIComponent(phone) + "%0A" +
-        "💻 *Course:* " + encodeURIComponent(course) + "%0A%0A" +
-        "📍 Kishangarh, Ajmer";
-
-      const whatsappNumber = "918432457652";
-
-      window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + message,
-        "_blank"
-      );
-    }
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
-            </html>
+          </html>
